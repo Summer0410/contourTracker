@@ -1,0 +1,10 @@
+
+.concealed{ 
+	display: none;
+}
+
+body{
+	margin-left:auto;
+	margin-right:auto;
+	background-color:white;
+}

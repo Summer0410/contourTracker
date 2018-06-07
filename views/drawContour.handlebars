@@ -1,0 +1,38 @@
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="css/draw.css">
+  <script src="static/Point2D.js"></script>
+  <script src="static/xhr.js"></script>
+  <script src="static/polygon.js"></script>
+  <script src="static/frame_initalizer.js"></script>
+  <script src="static/load.js"></script>
+  <script src="js/jquery.min.js"></script>
+</head>
+
+<body onload="load()">
+  <form enctype="multipart/form-data" method="post" id="main_form" name="fileinfo" action='http://localhost:8000/upload'>
+    <label>Ultrasound Video File:</label>
+    <input type="file" id="ultrasound_video_file" name="ultrasound_video" accept="video/*">
+    <br>
+    <!-- <input type='submit' id = 'submit_video' value='Upload Video' onsubmit='return upload()'/> -->
+    <br />
+    <label>Number of frames to initalize:</label>
+    <input type="number" id="ultrasound_segment_count" name="num_segments" value="1">
+    <input type="hidden" id="canvas" name="canvas">
+    <div class="concealed" id='hidden_block'>
+      <p>Draw Canvas:</p>
+      <canvas id="frame_canvas" style="brrxold#33d">
+      </canvas>
+      <br/>
+      <button class='action_button' id='submit_button' value='Submit'>Submit</button>
+      <button class='action_button' id='clear_button' value='Clear'>Clear</button>
+      <button class='action_button' id='next_frame_button' value='Next'>Next</button>
+      <button class='action_button' id='previous_frame_button' value='Previous'>Previous</button>
+      <!--<p>Video:</p>-->
+      <video id='ultrasound_video_container' hidden></video>
+    </div>
+  </form>
+</body>
+
+</html>
